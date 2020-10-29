@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DCDCDC">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image"
+        app:layout_constraintBottom_toTopOf="@+id/teamA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/teamA"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Team A"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/vs"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="VS"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        app:layout_constraintTop_toBottomOf="@+id/teamA"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="34dp" />
+
+    <EditText
+        android:id="@+id/teamB"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:inputType="text"
+        android:hint="Team B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vs"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="PlayGame"
+        android:text="Play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamB"
+        app:layout_constraintVertical_bias="0.225"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/buttonstyleselector"
+        android:textColor="#ffffff"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
